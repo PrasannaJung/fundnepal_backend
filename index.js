@@ -26,7 +26,7 @@ const userRoutes = require("./routes/user");
 const projectRoutes = require("./routes/project");
 const esewaRoutes = require("./routes/esewa");
 
-app.get("/api/test", () => {
+app.get("/api/test", (req, res) => {
   return res.status(200).json({ message: "Hello from the server" });
 });
 app.use("/api/user", userRoutes);
